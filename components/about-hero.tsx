@@ -7,11 +7,11 @@ export default function AboutHero() {
       <div className="space-y-12">
         <div className="relative">
           <Image
-            src="/about.jpeg"
-            alt="Rupesh working in different environments"
-            width={715}
-            height={200}
-            className="w-full h-48 object-cover rounded-lg user-select-none"
+            src="/aboutme.jpeg"
+            alt="Rupesh Chaudhary"
+            width={800}
+            height={1000}
+            className="w-full h-auto rounded-2xl shadow-2xl border border-border/20 grayscale hover:grayscale-0 transition-all duration-500"
             priority
             draggable={false}
           />
@@ -21,69 +21,38 @@ export default function AboutHero() {
             About Me
           </h1>
 
-          <div className="space-y-4 text-base leading-relaxed">
-            <p className="text-foreground">
+          <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
+            <p>
               Hey! I'm{' '}
               <a
-                className="text-blue-600 font-medium"
+                className="text-foreground font-medium underline decoration-blue-500/30 underline-offset-4 hover:decoration-blue-500 transition-all"
                 href="https://www.linkedin.com/in/rupesh-chaudhary-54a519261/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Rupesh
               </a>
-              . I build web applications that actually work and scale. Most of
-              my time goes into crafting backend systems using{' '}
-              <span className="text-blue-600 font-medium">Node.js</span>,{' '}
-              <span className="text-blue-600 font-medium">Express</span>, and{' '}
-              <span className="text-blue-600 font-medium">NestJS</span>, but I
-              also enjoy working with{' '}
-              <span className="text-blue-600 font-medium">Next.js</span> and
-              <span className="text-blue-600 font-medium"> React</span> when I
-              need to build something end-to-end.
+              . I build scalable web applications that solve real-world problems.
+              My expertise revolves around backend systems with{' '}
+              <span className="text-foreground font-medium">Node.js</span>,{' '}
+              <span className="text-foreground font-medium">NestJS</span>, and{' '}
+              <span className="text-foreground font-medium">PostgreSQL</span>,
+              while leveraging <span className="text-foreground font-medium">Next.js</span> and
+              <span className="text-foreground font-medium"> React Native</span> for seamless frontend experiences.
             </p>
 
-            <p className="text-foreground">
-              My coding journey started pretty early. When I was in 12th grade
-              (around 17-18), I did my first internship at{' '}
-              <span className="font-medium">Youth IT</span>. That's where I got
-              my hands dirty with real projects and learned how things actually
-              work in the industry. Since then, I've worked at{' '}
-              <span className="font-medium">MapMentors</span> building an LMS
-              platform, and now I'm at{' '}
-              <span className="font-medium">Digital Pathshala</span> here in
-              <span className="font-medium"> Nepal</span>.
+            <p>
+              My journey began early at <span className="text-foreground font-medium">Youth IT</span> and
+              <span className="text-foreground font-medium"> MapMentors</span>, where I learned the ropes of professional development.
+              Currently, I'm driving engineering efforts at <span className="text-foreground font-medium">Digital Pathshala</span> and
+              <span className="text-foreground font-medium"> FloSoftwares</span>, building complex platforms like
+              <span className="text-foreground font-medium"> Bhatbhate</span> (a ride-sharing app) and architecting robust microservices.
             </p>
 
-            <p className="text-foreground">
-              At Digital Pathshala, I work on both backend and frontend systems,
-              collaborate with international CEOs, and build real-world apps like{' '}
-              <span className="font-medium">Bhatbhate</span>—a ride-sharing app
-              for Nepal.
-            </p>
-
-            <p className="text-foreground">
-              I've been building applications using microservices architecture,
-              which has been a game-changer for how I think about system design.
-              Breaking down complex systems into smaller, independent services
-              makes everything more maintainable and scalable. It's not just
-              about writing code—it's about building systems that can grow.
-            </p>
-
-            <p className="text-foreground">
-              I've also had the opportunity to work with amazing people at{' '}
-              <span className="font-medium">Leapfrog Jury</span> and{' '}
-              <span className="font-medium">Impress</span>. Working with CEOs and
-              experienced leaders has taught me not just about code, but about
-              building products that matter and thinking bigger picture.
-            </p>
-
-            <p className="text-foreground">
-              When I'm not writing code, I'm usually exploring new tools,
-              tinkering with side projects, or contributing to open source. I'm
-              particularly interested in{' '}
-              <span className="font-medium">microservices architecture</span>,
-              <span className="font-medium"> API design</span>, and building
-              systems that can handle real-world traffic. Always learning,
-              always building.
+            <p>
+              Beyond the code, I'm passionate about <span className="text-foreground font-medium">system design</span>,
+              cloud architecture, and open source. I thrive on breaking down complex requirements into efficient, maintainable software.
+              Always learning, always building.
             </p>
           </div>
         </div>

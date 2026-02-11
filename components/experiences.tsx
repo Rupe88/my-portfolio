@@ -33,25 +33,47 @@ export default function Experiences() {
             <div className="space-y-8">
                 <h2 className="text-2xl font-bold text-foreground font-bricolage">Experiences</h2>
 
-                <div className="space-y-8">
-                    {experiences.map((experience) => (
-                        <div key={experience.id} className="flex items-start gap-4">
-                            <div className="shrink-0">
-                                <Image
-                                    src={experience.logo}
-                                    alt={experience.company}
-                                    width={56}
-                                    height={56}
-                                    className="size-14 rounded"
-                                />
-                            </div>
-                            <div className="space-y-1">
-                                <div className="flex flex-wrap items-baseline gap-2">
-                                    <h3 className="text-lg font-semibold text-foreground font-bricolage">{experience.title}</h3>
-                                    <span className="text-sm text-muted-foreground">{experience.period}</span>
+                <div className="space-y-6">
+                    {/* New Experience Added */}
+                    {[
+                        {
+                            id: 0,
+                            title: "Associate Software Developer",
+                            period: "Present",
+                            company: "FloSoftwares",
+                            logo: "/flosoft.jpg",
+                            description: "Working on scalable applications using Next.js, React Native, and NestJS. Delivering robust solutions for web and mobile platforms."
+                        },
+                        ...experiences
+                    ].map((experience) => (
+                        <div
+                            key={experience.id}
+                            className="group flex items-start gap-5 p-6 rounded-xl border border-border/40 bg-card/30 hover:border-border/60 hover:bg-card/50 transition-all duration-300 backdrop-blur-sm"
+                        >
+                            <div className="shrink-0 relative">
+                                <div className="w-14 h-14 rounded-lg overflow-hidden border border-border/50 shadow-sm group-hover:shadow-md transition-shadow">
+                                    <Image
+                                        src={experience.logo}
+                                        alt={experience.company}
+                                        width={56}
+                                        height={56}
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
-                                <p className="text-sm text-muted-foreground">{experience.company}</p>
-                                <p className="text-base text-foreground leading-relaxed">
+                            </div>
+                            <div className="space-y-2 flex-1">
+                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+                                    <h3 className="text-lg font-bold text-foreground font-bricolage leading-none group-hover:text-primary transition-colors">
+                                        {experience.title}
+                                    </h3>
+                                    <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-secondary/50 text-secondary-foreground border border-secondary/50 tabular-nums">
+                                        {experience.period}
+                                    </span>
+                                </div>
+                                <div className="text-sm font-medium text-muted-foreground/80 flex items-center gap-2">
+                                    {experience.company}
+                                </div>
+                                <p className="text-sm text-muted-foreground leading-relaxed pt-1">
                                     {experience.description}
                                 </p>
                             </div>

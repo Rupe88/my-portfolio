@@ -14,11 +14,11 @@ import { useCallback, useEffect, useState } from "react";
 import styles from "./Polaroid.module.css";
 
 const PHOTOS = [
-    "/polaroid/rupesh-chy.jpeg",
-    "/polaroid/rupesh-chy.jpeg",
-    "/polaroid/rupesh-chy.jpeg",
-    "/polaroid/rupesh-chy.jpeg",
-    "/polaroid/rupesh-chy.jpeg",
+    "/rupesh-chy.jpeg",
+    "/back.jpeg",
+    "/aboutme.jpeg",
+    "/clg.jpeg",
+    "/clg2.jpeg",
 ];
 
 /**
@@ -137,7 +137,7 @@ export function Polaroid({
                         return (
                             <Image
                                 alt="Rupu"
-                                className="absolute inset-0 h-full w-full pointer-events-none"
+                                className="absolute inset-0 h-full w-full pointer-events-none object-cover"
                                 key={index}
                                 priority
                                 src={photo}

@@ -30,9 +30,9 @@ export default function HeroSection() {
           </p>
           <p className="text-xl text-foreground">
             at{' '}
-            <Tooltip content={<TooltipCard />}>
-              <span className="font-medium cursor-pointer">
-                Digital Pathshala
+            <Tooltip content={<FloSoftwaresCard />}>
+              <span className="font-medium cursor-pointer underline decoration-dashed underline-offset-4 decoration-neutral-400 hover:text-foreground/80 transition-colors">
+                FloSoftwares
               </span>
             </Tooltip>
           </p>
@@ -76,7 +76,7 @@ export default function HeroSection() {
   );
 }
 
-const TooltipCard = () => {
+const DigitalPathshalaCard = () => {
   return (
     <div>
       <img
@@ -92,6 +92,26 @@ const TooltipCard = () => {
           through comprehensive IT education, innovative software solutions, and
           government partnerships, making technology accessible to everyone
           across the nation.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const FloSoftwaresCard = () => {
+  return (
+    <div>
+      <img
+        src="/flosoft.jpg"
+        alt="FloSoftwares"
+        className="aspect-square w-full rounded-sm object-cover"
+      />
+      <div className="my-4 flex flex-col">
+        <p className="text-lg font-bold">FloSoftwares</p>
+        <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-400">
+          A dynamic software development company specializing in building scalable
+          web and mobile applications. Expertise in Next.js, React Native, and
+          NestJS to deliver robust digital solutions.
         </p>
       </div>
     </div>
