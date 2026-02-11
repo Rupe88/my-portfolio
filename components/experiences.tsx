@@ -38,7 +38,7 @@ export default function Experiences() {
                     {[
                         {
                             id: 0,
-                            title: "Associate Software Developer",
+                            title: "Software Developer",
                             period: "Present",
                             company: "FloSoftwares",
                             logo: "/flosoft.jpg",
