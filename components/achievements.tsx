@@ -14,7 +14,7 @@ const achievements = [
       </div>
     ),
     title: "Winner – IICQuest 3.0 Hackathon",
-    organization: "INCQuest 3.0",
+    organization: "IICQuest 3.0",
     description: "Secured 1st place among Nepal's top 20+ college teams in a 36-hour intense hackathon."
   },
   {
