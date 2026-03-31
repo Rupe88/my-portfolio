@@ -24,7 +24,7 @@ export default function HomeAchievements() {
                   <h3 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70 font-bricolage">Winner 🏆</h3>
                   <span className="px-3 py-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-100/50 dark:bg-emerald-900/20 border border-emerald-200/50 dark:border-emerald-800/50 rounded-full">First Place</span>
                 </div>
-                <p className="text-base md:text-lg text-foreground/90 font-medium tracking-tight"> INCQuest 3.0 Hackathon </p>
+                <p className="text-base md:text-lg text-foreground/90 font-medium tracking-tight"> IICQuest 3.0 Hackathon </p>
               </div>
             </div>
             <p className="text-sm md:text-base text-foreground leading-relaxed">
@@ -33,7 +33,7 @@ export default function HomeAchievements() {
               cosine similarity-based job matching, and community-powered dispute resolution.
             </p>
             <p className="text-xs md:text-sm text-muted-foreground mt-2">
-              INCQuest 3.0 Hackathon - ChalkBox
+              IICQuest 3.0 Hackathon - ChalkBox
             </p>
           </div>
           <div className="shrink-0 w-full md:w-auto order-1 md:order-2 flex justify-center md:justify-start">
@@ -43,7 +43,7 @@ export default function HomeAchievements() {
             >
               <Image
                 src="/hackathon.png"
-                alt="INCQuest 3.0 Hackathon - ChalkBox"
+                alt="IICQuest 3.0 Hackathon - ChalkBox"
                 width={300}
                 height={200}
                 className="w-full h-full object-cover rounded-lg shadow-lg"

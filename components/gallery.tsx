@@ -14,7 +14,7 @@ const galleryItems = [
     },
     {
         src: "/hackathon.png",
-        alt: "INCQuest 3.0 Hackathon Victory",
+        alt: "IICQuest 3.0 Hackathon Victory",
         title: "Hackathon Win",
         category: "Achievements",
         className: "md:col-span-2 md:row-span-1"
