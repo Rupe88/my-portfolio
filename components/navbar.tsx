@@ -79,6 +79,9 @@ export default function Navbar() {
             <Link href="/about" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
               About
             </Link>
+            <Link href="/products" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
+              Products
+            </Link>
             <Link href="/contact" className="text-sm text-foreground hover:text-muted-foreground transition-colors">
               Contact
             </Link>
@@ -150,6 +153,7 @@ export default function Navbar() {
                   {[
                     { href: "/", label: "Home" },
                     { href: "/about", label: "About" },
+                    { href: "/products", label: "Products" },
                     { href: "/contact", label: "Contact" },
                     { href: "/colophon", label: "Colophon" }
                   ].map((item, index) => (

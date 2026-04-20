@@ -26,22 +26,26 @@ export default function HeroSection() {
 
         <div className="space-y-2">
           <p className="text-xl text-foreground font-medium">
-            Full Stack Developer | Building Scalable Web Apps
+            Full Stack Developer | Building Scalable SaaS Platforms
           </p>
           <p className="text-xl text-foreground">
             at{' '}
             <Tooltip content={<FloSoftwaresCard />}>
-              <span className="font-medium cursor-pointer underline decoration-dashed underline-offset-4 decoration-neutral-400 hover:text-foreground/80 transition-colors">
+              <button
+                type="button"
+                className="font-medium underline decoration-dashed underline-offset-4 decoration-neutral-400 transition-colors hover:text-foreground/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60 rounded-sm px-0.5 active:text-foreground/80"
+              >
                 FloSoftwares
-              </span>
+              </button>
             </Tooltip>
           </p>
         </div>
 
         <p className="text-base text-muted-foreground leading-relaxed max-w-[600px]">
-          I specialize in building scalable web applications using modern
-          technologies. Passionate about creating efficient, user-friendly
-          solutions that solve real-world problems.
+          I specialize in designing and delivering scalable software products,
+          including white-label SaaS platforms used by high-growth clients.
+          Passionate about building reliable, user-focused solutions that solve
+          real-world problems.
         </p>
 
         <div className="pt-2">
@@ -109,9 +113,9 @@ const FloSoftwaresCard = () => {
       <div className="my-4 flex flex-col">
         <p className="text-lg font-bold">FloSoftwares</p>
         <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-400">
-          A dynamic software development company specializing in building scalable
-          web and mobile applications. Expertise in Next.js, React Native, and
-          NestJS to deliver robust digital solutions.
+          Built and scaled a white-label SaaS product as a core business
+          offering. Delivered with Next.js, React Native, and NestJS, with
+          adoption among major LMS clients in Nepal.
         </p>
       </div>
     </div>

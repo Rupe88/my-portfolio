@@ -42,7 +42,7 @@ export default function Experiences() {
                             period: "Present",
                             company: "FloSoftwares",
                             logo: "/flosoft.jpg",
-                            description: "Working on scalable applications using Next.js, React Native, and NestJS. Delivering robust solutions for web and mobile platforms."
+                            description: "Led development of a white-label SaaS platform as the company’s flagship product. Built and scaled the solution using Next.js, React Native, and NestJS, with adoption from some of Nepal’s largest LMS clients."
                         },
                         ...experiences
                     ].map((experience) => (

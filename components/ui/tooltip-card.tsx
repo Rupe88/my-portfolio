@@ -101,6 +101,7 @@ export const Tooltip = ({
     };
 
     const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+        if (!window.matchMedia("(hover: none)").matches) return;
         const touch = e.touches[0];
         const rect = e.currentTarget.getBoundingClientRect();
         const mouseX = touch.clientX - rect.left;
@@ -109,24 +110,11 @@ export const Tooltip = ({
         setIsVisible(true);
     };
 
-    const handleTouchEnd = () => {
-        // Delay hiding to allow for tap interaction
-        setTimeout(() => {
-            setIsVisible(false);
-            setMouse({ x: 0, y: 0 });
-            setPosition({ x: 0, y: 0 });
-        }, 2000);
-    };
-
     const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        // Toggle visibility on click for mobile devices
+        // Keep tooltip open on mobile tap and close only on outside tap.
         if (window.matchMedia("(hover: none)").matches) {
             e.preventDefault();
-            if (isVisible) {
-                setIsVisible(false);
-                setMouse({ x: 0, y: 0 });
-                setPosition({ x: 0, y: 0 });
-            } else {
+            if (!isVisible) {
                 const rect = e.currentTarget.getBoundingClientRect();
                 const mouseX = e.clientX - rect.left;
                 const mouseY = e.clientY - rect.top;
@@ -135,6 +123,37 @@ export const Tooltip = ({
             }
         }
     };
+
+    useEffect(() => {
+        if (!isVisible) return;
+
+        const closeTooltip = () => {
+            setIsVisible(false);
+            setMouse({ x: 0, y: 0 });
+            setPosition({ x: 0, y: 0 });
+        };
+
+        const handlePointerDown = (event: PointerEvent) => {
+            if (!containerRef.current) return;
+            if (!containerRef.current.contains(event.target as Node)) {
+                closeTooltip();
+            }
+        };
+
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                closeTooltip();
+            }
+        };
+
+        document.addEventListener("pointerdown", handlePointerDown);
+        document.addEventListener("keydown", handleEscape);
+
+        return () => {
+            document.removeEventListener("pointerdown", handlePointerDown);
+            document.removeEventListener("keydown", handleEscape);
+        };
+    }, [isVisible]);
 
     // Update position when tooltip becomes visible or content changes
     useEffect(() => {
@@ -152,7 +171,6 @@ export const Tooltip = ({
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}
             onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
             onClick={handleClick}
         >
             {children}
@@ -168,7 +186,7 @@ export const Tooltip = ({
                             stiffness: 200,
                             damping: 20,
                         }}
-                        className="pointer-events-none absolute z-50 min-w-[15rem] overflow-hidden rounded-md border border-transparent bg-white shadow-sm ring-1 shadow-black/5 ring-black/5 dark:bg-neutral-900 dark:shadow-white/10 dark:ring-white/5"
+                        className="pointer-events-none absolute z-50 max-w-[min(90vw,20rem)] min-w-[13rem] overflow-hidden rounded-md border border-transparent bg-white shadow-sm ring-1 shadow-black/5 ring-black/5 dark:bg-neutral-900 dark:shadow-white/10 dark:ring-white/5 md:min-w-[15rem]"
                         style={{
                             top: position.y,
                             left: position.x,
