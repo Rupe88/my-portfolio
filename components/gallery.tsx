@@ -144,7 +144,7 @@ export default function Gallery() {
                                 src={item.src}
                                 alt={item.alt}
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="object-cover transition-all duration-700 grayscale brightness-65 contrast-90 opacity-85 group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 group-hover:opacity-100 group-hover:scale-110"
                                 sizes="(max-width: 768px) 50vw, 33vw"
                             />
                         </motion.div>
@@ -194,13 +194,21 @@ export default function Gallery() {
                             onClick={(e) => e.stopPropagation()}
                         >
                             <div className="relative w-full h-full flex items-center justify-center">
-                                <Image
-                                    src={galleryItems[selectedId].src}
-                                    alt={galleryItems[selectedId].alt}
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
+                                <motion.div
+                                    key={selectedId}
+                                    initial={{ opacity: 0, scale: 0.98 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    transition={{ duration: 0.28, ease: "easeOut" }}
+                                    className="relative w-full h-full"
+                                >
+                                    <Image
+                                        src={galleryItems[selectedId].src}
+                                        alt={galleryItems[selectedId].alt}
+                                        fill
+                                        className="object-contain"
+                                        priority
+                                    />
+                                </motion.div>
                             </div>
 
                             {/* Lightbox Caption */}
