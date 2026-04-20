@@ -1,9 +1,9 @@
 import {
   SiNodedotjs, SiExpress, SiNextdotjs, SiReact, SiNestjs, SiMongodb,
   SiPrisma, SiTypescript, SiPostgresql, SiGit, SiGithub, SiDocker,
-  SiBun, SiRedhat, SiAmazon, SiPostman, SiKubernetes
+  SiBun, SiRedhat, SiPostman, SiKubernetes
 } from "react-icons/si"
-import { TbBrandAzure } from "react-icons/tb"
+import { TbBrandAws, TbBrandAzure } from "react-icons/tb"
 import Marquee from "@/components/ui/marquee"
 
 const techStacks = [
@@ -20,7 +20,7 @@ const techStacks = [
   { name: "PostgreSQL", icon: SiPostgresql, color: "text-blue-700" },
   { name: "Docker", icon: SiDocker, color: "text-blue-500" },
   { name: "DevOps", icon: SiKubernetes, color: "text-blue-600" },
-  { name: "AWS", icon: SiAmazon, color: "text-orange-500" },
+  { name: "AWS", icon: TbBrandAws, color: "text-orange-500" },
   { name: "Azure", icon: TbBrandAzure, color: "text-blue-600" },
   { name: "Postman", icon: SiPostman, color: "text-orange-600" },
   { name: "Bun", icon: SiBun, color: "text-yellow-600" },
